@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design with Car Prices</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(69, 65, 66);
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .box {
+            background: linear-gradient(135deg, pink,rgb(225, 42, 73));
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin: 15px;
+            flex: 1 1 300px;
+            max-width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px black (0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .box:hover {
+            transform: translateY(-px);
+            box-shadow: 0 8px 20px rgba(231, 67, 67, 0.3);
+            transform: scale(1.05);
+        }
+
+        .box h2 {
+            margin: 0 0 10px;
+            font-size: 28px;
+        }
+
+        .box p {
+            margin: 10px 0 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .box .details {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #f4f4f9;
+            opacity: 0.8;
+        }
+
+        .box .signup {
+            margin-top: 20px;
+        }
+
+        .box .signup button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: rgb(189, 66, 86);
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .box .signup button:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>Student Plan</h2>
+            <p>$15</p>
+            <div class="details">Per Month</div>
+            <div class="signup">
+                <button>Get Started</button>
+            </div>
+        </div>
+        <div class="box">
+            <h2>Jeep Wagoneer</h2>
+            <p>$45</p>
+            <div class="details"> Per Month</div>
+            <div class="signup">
+                <button>Get Started</button>
+            </div>
+        </div>
+        <div class="box">
+            <h2>Enterprise Plan</h2>
+            <p>$99</p>
+            <div class="details">3 Months</div>
+            <div class="signup">
+                <button>Get Started</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
